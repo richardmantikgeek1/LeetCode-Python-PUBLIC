@@ -1,9 +1,15 @@
 class Solution:
     def smallerNumbersThanCurrent(self, array):
-        memo = {}
         ret_val = []
+        sorted_array = sorted(array)
+        memo = {}
+        for i in range(0, len(sorted_array)):
+            num = sorted_array[i]
+            if (num not in memo.keys()):
+                memo[num] = i
+        
         for i in range(0, len(array)):
-            num_i = array[i]
-            count_smaller_nums = len([a for a in array if a < num_i])
-            ret_val.append(count_smaller_nums)
+            num = array[i]
+            ret_val.append(memo[num])
+
         return ret_val
