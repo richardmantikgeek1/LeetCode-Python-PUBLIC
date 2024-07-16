@@ -10,6 +10,7 @@ class Solution:
                 num_2 = array_2[j]
                 if (abs(num_1 - num_2) <= d):
                     is_distanced = False
+                    break
             if (is_distanced):
                 ret_val += 1
         return ret_val
