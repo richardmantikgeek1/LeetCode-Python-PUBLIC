@@ -48,7 +48,7 @@ class Solution:
 
     def get_prime_divisors_list(self, num):
         start_num = 1
-        end_num = 1000
+        end_num = num
 
         is_prime_dict = {}
         is_prime_dict[0] = False

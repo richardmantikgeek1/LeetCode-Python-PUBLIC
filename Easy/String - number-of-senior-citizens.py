@@ -1,8 +1,9 @@
 class Solution:
     def countSeniors(self, details):
-        ret_val = 0
-        for d in details:
-            if (int(d[11:13]) > 60):
-                ret_val += 1
-        
-        return ret_val
+        count_senior_citizens = 0
+        for s in details:
+            age = int(s[-4:-2])
+            if (age > 60):
+                count_senior_citizens += 1
+
+        return count_senior_citizens

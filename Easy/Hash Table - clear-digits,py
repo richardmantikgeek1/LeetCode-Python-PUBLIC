@@ -1,0 +1,18 @@
+class Solution:
+    def clearDigits(self, s):
+        i = 0
+        while(i < len(s)):
+            if (s[i].isdecimal()):
+                j = i - 1
+                while (j >= 0):
+                    if (s[j].isalpha()):
+                        s = s[0:i] + s[i+1:]
+                        s = s[0:j] + s[j+1:]
+                        i -= 1
+                        break
+                    j -= 1
+            else:
+                i += 1
+
+        return s
+            
